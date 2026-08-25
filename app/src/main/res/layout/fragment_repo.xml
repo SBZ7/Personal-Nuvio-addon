@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_dark">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Plugin Repos"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:padding="16dp"
+        android:background="@color/bg_card"/>
+
+    <!-- Installed repos list (compact) -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_repos"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:padding="8dp"/>
+
+    <ProgressBar
+        android:id="@+id/progress_repo"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:indeterminate="true"
+        android:visibility="gone"
+        style="?android:attr/progressBarStyleHorizontal"/>
+
+    <!-- WebView to browse nuvioplugins.com -->
+    <WebView
+        android:id="@+id/webview_nuvio"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.5"/>
+
+    <Button
+        android:id="@+id/btn_add_repo_manual"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="+ Add Repo by URL"
+        android:backgroundTint="@color/accent"
+        android:textColor="@color/white"
+        android:layout_margin="8dp"/>
+
+</LinearLayout>

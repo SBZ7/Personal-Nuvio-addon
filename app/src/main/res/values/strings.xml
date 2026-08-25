@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NuvioStremio</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_repos">Repos</string>
+    <string name="nav_plugins">Plugins</string>
+</resources>

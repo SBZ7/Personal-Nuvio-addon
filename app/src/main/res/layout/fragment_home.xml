@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:gravity="center_horizontal">
+
+        <!-- Logo / Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🎬 NuvioStremio"
+            android:textSize="26sp"
+            android:textColor="@color/accent"
+            android:textStyle="bold"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp"/>
+
+        <!-- Status Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@color/bg_card"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_status_dot"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/ic_dot"
+                        android:colorFilter="@color/grey"/>
+
+                    <TextView
+                        android:id="@+id/tv_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Server Stopped"
+                        android:textColor="@color/grey"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="10dp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_plugin_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 plugins active"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="14sp"
+                    android:layout_marginTop="6dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Addon URL"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="12sp"
+                    android:layout_marginTop="16dp"/>
+
+                <TextView
+                    android:id="@+id/tv_url"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="http://192.168.1.x:8585/manifest.json"
+                    android:textColor="@color/accent"
+                    android:textSize="13sp"
+                    android:fontFamily="monospace"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/bg_dark"
+                    android:padding="10dp"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Action Buttons -->
+        <Button
+            android:id="@+id/btn_toggle"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Start Server"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/accent"
+            android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:id="@+id/btn_copy"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="📋 Copy Addon URL"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/bg_card"
+            android:enabled="false"
+            android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:id="@+id/btn_install_stremio"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="⚡ Install in Stremio"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/accent_dark"
+            android:enabled="false"/>
+
+        <!-- Info note -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💡 Stremio and this phone must be on the same Wi-Fi network to use the LAN IP. Use 127.0.0.1 when accessing from Stremio on this device."
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
+            android:layout_marginTop="24dp"
+            android:lineSpacingExtra="4dp"/>
+
+    </LinearLayout>
+</ScrollView>
